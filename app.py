@@ -74,7 +74,7 @@ def home_post():
         db.session.commit()
         flash('Your post has been created!', 'success')
 
-    # Fetch all posts for the homepage
+    #  posts for the homepage
     posts = Post.query.all()
     return render_template('home.html', posts=posts)
 
