@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="file:///C:\wamp64\www\IG\static\styles.css">
+    <link rel="stylesheet" href= "/static/styles.css">
 </head>
 <body>
     <h1>Welcome, guest!</h1>
@@ -12,12 +12,13 @@
     <h2>Posts</h2>
     <div>
             <div class="post">
+                {% for post in posts %}
                 <h3>{{ post.user.username }}</h3>
-                <p>{{ post.content }}</p>
+                {% endfor %}
             </div>
             <p>No posts yet!</p>
     </div>
 </body>
 </html>
-<a href="file:///C:\wamp64\www\IG/templates/login.html">Login</a>
-<a href="file:///C:\wamp64\www\IG/templates\signup.html">Sign Up</a>
+<a href=http://127.0.0.1:5000/login>Login</a>
+<a href=http://127.0.0.1:5000/signup>Sign Up</a>
