@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="file:///C:\wamp64\www\IG\static\styles.css">
     <title>Profile</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .post { border: 1px solid #ccc; margin: 10px; padding: 10px; }
+        .post img { max-width: 100%; height: auto; }
+        h2 { text-align: center; }
+    </style>
 </head>
 <body>
-    <h1>{ username }'s Profile</h1>
-    <a href="file:///C:\wamp64\www\IG\templates\home.html">Logout</a>
+    <h2>Profile of {{ user[1] }}</h2> <!-- Assuming user[1] is the username -->
+    
+    <h3>Your Posts</h3>
+    <div id="posts">
+        {% if posts %}
+            {% for post in posts %}
+            <div class="post">
+                <img src="{{ post[2] }}" alt="Post Image"> <!-- Assuming post[2] is the image URL -->
+                <p>{{ post[3] }}</p> <!-- Assuming post[3] is the caption -->
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No posts to display.</p>
+        {% endif %}
+    </div>
+
+    <a href=http://127.0.0.1:5000>Back to Home</a>
+    <a href=http://127.0.0.1:5000/logout>Logout</a>
 </body>
 </html>
