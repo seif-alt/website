@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "/static/styles.css">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to InstaClone</h1>
+    <a href=http://127.0.0.1:5000/login>Login</a>
+    <a href=http://127.0.0.1:5000/signup>Sign Up</a>
+    <a href=/homepageasguest>Continue as guest</a>
+</body>
+</html>
